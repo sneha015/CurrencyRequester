@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="converter.currency.com.currencyrequester.MainActivity"
+    android:background="#daa6d6"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="100"
+        android:paddingTop="20dp">
+    <TextView
+        android:id="@+id/amount_label"
+        android:text="Amount:"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/amount"
+        android:layout_toRightOf="@id/amount_label"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@id/layout1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:layout_centerVertical="true"
+        android:paddingTop="25dp">
+    <TextView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/locale_label"
+        android:layout_below="@id/amount_label"
+        android:text="Locale:"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_below="@id/layout2"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:paddingTop="50dp">
+    <Button
+        android:id="@+id/request_button"
+        android:layout_weight="50"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Request"
+        android:background="#2dc560"
+        android:textSize="20sp"
+       />
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:layout_width="0dp"
+        android:text="Close"
+        android:textSize="20sp"
+        android:background="#f12e52" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_below="@id/layout3"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:weightSum="100">
+    <TextView
+        android:id="@+id/result"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="168dp" />
+    </LinearLayout>
+</RelativeLayout>
